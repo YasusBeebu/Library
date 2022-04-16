@@ -12,24 +12,22 @@
 	--mainColor: #9197ae;
 }
 
-/* ASIDE */
 svg {
 	fill: var(--asideTextColor);
 	color: var(--asideTextColor);
 }
+
 svg:hover {
 	fill: aquamarine;
 }
+
 .appContainer {
 	background-color: var(--appContainerColor);
 	display: grid;
 	grid-template-columns: 1fr 20fr;
 }
 
-main {
-	grid-template-columns: 5;
-	background-color: var(--mainColor);
-}
+/* ASIDE */
 
 aside {
 	color: var(--asideTextColor);
@@ -59,15 +57,18 @@ aside div {
 
 /* MAIN */
 main {
+	background-color: var(--mainColor);
 }
+
 .bookCardContainer {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: repeat(3, 1fr);
-	gap: 20px;
+	gap: 5%;
 	justify-items: center;
 	margin-top: 5%;
 }
+
 .bookCard {
 	background-color: aqua;
 	width: 50%;
