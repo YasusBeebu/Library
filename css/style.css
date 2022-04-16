@@ -11,6 +11,8 @@
 	--appContainerColor: #273043;
 	--mainColor: #9197ae;
 }
+
+/* ASIDE */
 svg {
 	fill: var(--asideTextColor);
 	color: var(--asideTextColor);
@@ -53,4 +55,21 @@ aside div {
 
 .asideBottom div:hover {
 	color: #9197ae;
+}
+
+/* MAIN */
+main {
+}
+.bookCardContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 20px;
+	justify-items: center;
+	margin-top: 5%;
+}
+.bookCard {
+	background-color: aqua;
+	width: 50%;
+	height: 200px;
 }
