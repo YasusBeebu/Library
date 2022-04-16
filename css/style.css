@@ -4,12 +4,14 @@
 	box-sizing: border-box;
 	font-size: 12px;
 	font-family: "Patrick Hand";
+	z-index: 0;
 }
 
 :root {
 	--asideTextColor: #eff6ee;
 	--appContainerColor: #273043;
 	--mainColor: #9197ae;
+	--medium: #e1e7ef;
 }
 
 svg {
@@ -25,6 +27,11 @@ svg:hover {
 	background-color: var(--appContainerColor);
 	display: grid;
 	grid-template-columns: 1fr 20fr;
+}
+
+body {
+	z-index: 1;
+	background-color: black;
 }
 
 /* ASIDE */
@@ -66,11 +73,77 @@ main {
 	grid-template-rows: repeat(3, 1fr);
 	gap: 5%;
 	justify-items: center;
-	margin-top: 5%;
+	margin: 5%;
+	height: 100%;
 }
 
+/* BOOKCARD */
 .bookCard {
-	background-color: aqua;
-	width: 50%;
-	height: 200px;
+	display: grid;
+	background-color: var(--asideTextColor);
+	padding: 15px;
+	border-radius: 5%;
+}
+
+.bookCard img {
+	width: 100%;
+	height: 100%;
+}
+
+.bookCardTop {
+	display: grid;
+	gap: 5px;
+	justify-items: start;
+	grid-template-columns: 1fr 3fr;
+
+	padding-bottom: 10px;
+}
+
+.bookCardTop h2 {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.bookTitle {
+	display: flex;
+	flex-direction: column;
+}
+
+.credits {
+	display: flex;
+	flex: 1;
+	align-items: flex-end;
+	justify-content: space-around;
+}
+
+.isRead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.isRead button {
+	width: 30px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: green;
+}
+
+.isRead button:active {
+	background-color: red;
+}
+
+.isRead p {
+	font-size: 2em;
+}
+
+.descr {
+	padding: 10px 0 10px 0;
+	text-overflow: ellipsis;
+}
+
+.descr p {
+	display: inline-block;
 }
